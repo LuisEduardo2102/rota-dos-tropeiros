@@ -1,8 +1,4 @@
 from django.contrib import admin
-
-# Register your models here.
-# ...existing code...
-from django.contrib import admin
 from .models import Rota, Parada, RotaParadaHorario
 
 @admin.action(description="Marcar como ativo")
