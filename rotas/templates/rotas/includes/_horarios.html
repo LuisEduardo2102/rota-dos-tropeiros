@@ -15,7 +15,7 @@
       <li class="nav-item" role="presentation">
         <button class="nav-link {% if forloop.first %}active{% endif %}" id="tab-{{ rota.id }}" data-bs-toggle="tab"
           data-bs-target="#linha{{ rota.id }}" type="button" role="tab" aria-controls="linha{{ rota.id }}"
-          aria-selected="{% if forloop.first %}true{% else %}false{% endif %}" data-route="{{ rota.id }}">
+          aria-selected="{% if forloop.first %}true{% else %}false{% endif %}" data-route="linha{{ rota.id }}">
           {{ rota.nome }}
         </button>
       </li>
