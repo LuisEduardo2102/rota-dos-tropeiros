@@ -39,7 +39,7 @@
                   </tr>
                 </thead>
                 <tbody>
-                  {% for horario in rota.horario_parada.all %}
+                  {% for horario in rota.horarios_parada.all %}
                   {% if horario.ativo %}
                   <tr>
                     <td>{{ horario.parada.endereco }}</td>
