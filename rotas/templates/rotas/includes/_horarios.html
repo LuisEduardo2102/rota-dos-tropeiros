@@ -35,7 +35,7 @@
                   <tr>
                     <th scope="col">Parada</th>
                     <th scope="col">Próximo</th>
-                    <th scope="col">Seguinte</th>
+                    <!-- <th scope="col">Seguinte</th> -->
                   </tr>
                 </thead>
                 <tbody>
@@ -44,7 +44,7 @@
                   <tr>
                     <td>{{ horario.parada.endereco }}</td>
                     <td>{{ horario.horario|date:"H:i" }}</td>
-                    <td>{{ horario.proximo_horario|date:"H:i"|default:"—" }}</td>
+                    <!-- <td>{{ horario.proximo_horario|date:"H:i"|default:"—" }}</td> -->
                   </tr>
                   {% endif %}
                   {% empty %}
