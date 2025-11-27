@@ -1,0 +1,30 @@
+# Banco de dados
+db.sqlite3
+*.sqlite3
+
+# Variáveis de ambiente
+.env
+.env.local
+
+# Cache do Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# Diretórios de ambiente virtual
+venv/
+env/
+ENV/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Arquivos estáticos coletados
+staticfiles/
+
+# Logs
+*.log
