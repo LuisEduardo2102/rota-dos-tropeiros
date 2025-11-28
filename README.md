@@ -22,8 +22,8 @@ Para ver o funcionamento primeiro, é recomendado criar um ambiente virtual usan
 
 depois precisamos ativá-lo:
 no CodeSpace / linux use o comando "source .venv/bin/activate"
-no Windows ".\.venv\Scripts\activate"
-
+no Windows ".\.venv\Scripts\activate" (era pra aparcer "\" antes do .venv)
+ 
 Depois instale as dependencias com "pip install Django Pillow"
 
 ele irá pedir usuário, e-mail e senha, pode inserir valores ficticios e qualquer senha, se a senha for muito curta aparecerá um prompt falando que a senha é muito fraca,
