@@ -26,13 +26,13 @@ no Windows ".\\.venv\Scripts\activate"
  
 Depois instale as dependencias com "pip install Django Pillow"
 
-ele irá pedir usuário, e-mail e senha, pode inserir valores ficticios e qualquer senha, se a senha for muito curta aparecerá um prompt falando que a senha é muito fraca,
-apenas confirme a senha com y.
 
 agora execute os comando "python manage.py makemigrations" e depois "python manage.py migrate" para criar o arquivo do banco de dados
 
 agora precisamos criar um super usuário para adicionarmos informações no banco de dados:
 no terminal use o comando "python (ou python3) manage.py createsuperuser" (sem aspas)
+ele irá pedir usuário, e-mail e senha, pode inserir valores ficticios e qualquer senha, se a senha for muito curta aparecerá um prompt falando que a senha é muito fraca,
+apenas confirme a senha com y.
 
 e por fim rode o servidor "python manage.py runserver"
 
