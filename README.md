@@ -1,65 +1,78 @@
-# Projeto Rota dos Tropeiros
-## O que é? 
-é um projeto realizado em curso com a finidade de desenvolver uma solução social
-em que ajude as pessoas de alguma forma. Nosso grupo resolver criar uma solução para facilitar
-o uso do transporte público local
+# 🗺️ Projeto Rota dos Tropeiros
 
-(Hero do site)
+## 📝 Sobre o Projeto
 
-<img width="1366" height="690" alt="Captura de tela de 2025-11-27 11-47-24" src="https://github.com/user-attachments/assets/87a9635a-8612-4d1b-bdf6-292f5a78f355" />
+O Rota dos Tropeiros é um projeto desenvolvido academicamente com a finalidade de criar uma solução social que ajude as pessoas a facilitarem o uso do transporte público local.
 
+<img width="1366" height="690" alt="Hero do site" src="https://github.com/user-attachments/assets/87a9635a-8612-4d1b-bdf6-292f5a78f355" />
 
-## Como funciona?
-Simplificando, ele usa APIs como Open Street Map e Leaf Leet para mapa e roteamento, para criarmos 
-as rotas é necessário termos as coordenadas geográficas dos pontos da cidade, que podem ser
-retiradas através do Google Maps.
+### ⚙️ Como funciona?
 
-## Como posso testar? 
-Você pode baixar os arquivos do repositório e executar em sua IDE ou pode abrir pelo Code Space(Recomendado).
+A aplicação utiliza as seguintes ferramentas para gerar os mapas e trajetos:
 
-Para ver o funcionamento primeiro, é recomendado criar um ambiente virtual usando o venv
-"python (ou python3) -m venv .venv"
+    APIs de Mapa: Open Street Map e Leaflet para renderização e roteamento.
 
-depois precisamos ativá-lo:
-no CodeSpace / linux use o comando "source .venv/bin/activate"
-no Windows ".\\.venv\Scripts\activate" 
- 
-Depois instale as dependencias com "pip install Django Pillow"
+    Coordenadas: Para criar as rotas, utilizamos as coordenadas geográficas dos pontos da cidade, que podem ser extraídas via Google Maps.
 
+### 🚀 Como posso testar?
 
-agora execute os comando "python manage.py makemigrations" e depois "python manage.py migrate" para criar o arquivo do banco de dados
+Você pode baixar os arquivos do repositório ou executar via Code Space (Recomendado).
+### 1. Configurar Ambiente Virtual
 
-agora precisamos criar um super usuário para adicionarmos informações no banco de dados:
-no terminal use o comando "python (ou python3) manage.py createsuperuser" (sem aspas)
-ele irá pedir usuário, e-mail e senha, pode inserir valores ficticios e qualquer senha, se a senha for muito curta aparecerá um prompt falando que a senha é muito fraca,
-apenas confirme a senha com y.
+Recomenda-se criar um ambiente isolado:
+```Bash
 
-e por fim rode o servidor "python manage.py runserver"
+python -m venv .venv
+```
+Ativação:
 
-## Vamos adicionar informações:
-Para acessarmos o Admin precisamos alter a barra de enederço, onde está escrito "127.0.0.1:8000" mude para "127.0.0.1:8000/admin" e insira os dados de login do super usuário.
+    Linux/CodeSpace: source .venv/bin/activate
 
-Agora que entramos no admin, iremos adicionar uma Linha de Ônibus, clique em "+ Adicionar" ao lado de "Rotas", 
-dê um nome, por exemplo: "Jardim Bonito / Bairro das Flores"
+    Windows: .\.venv\Scripts\activate
 
-<img width="1078" height="426" alt="Captura de tela de 2025-11-27 12-08-08" src="https://github.com/user-attachments/assets/5709f864-29f5-4006-af44-45938753e1eb" />
+#### 2. Instalar Dependências
+```Bash
 
-por enquanto não temos nehum ponto cadastrado, então apenas clique em salvar.
+pip install Django Pillow
+```
+#### 3. Migrar Banco de Dados
+```Bash
 
-agora vamos adicionar um ponto, clique em "+ Adicionar" ao lado de "Paradas".
+python manage.py makemigrations
+```
+```
+python manage.py migrate
+```
+#### 4. Criar Super Usuário
 
-<img width="1050" height="528" alt="Captura de tela de 2025-11-27 12-14-38" src="https://github.com/user-attachments/assets/7f9d41e9-9a2e-4e39-be55-1e1967618806" />
+Para gerenciar os dados, crie um acesso administrativo:
+```Bash
+python manage.py createsuperuser
+```
+   **Insira os dados solicitados. Se a senha for curta, confirme com y.**
 
-Insira um nome do ponto, e depois cole as coordenadas do ponto que podem ser pegas através do Google Maps
+#### 5. Rodar o Servidor
+```Bash
+python manage.py runserver
+```
+### 🛠️ Adicionando Informações (Passo a Passo)
+#### Passo 1: Acesso ao Admin
 
-<img width="627" height="442" alt="Captura de tela de 2025-11-27 12-13-06" src="https://github.com/user-attachments/assets/5babbba1-edfa-481e-a896-5dae7481a9b2" />
+Acesse ```http://127.0.0.1:8000/admin``` e faça login com seu super usuário.
 
-clique em cima de "Rota" e depois o nome da Linha que você cadastrou nesse caso "Jardim Bonito / Bairro das Flores" 
-adicione o Ponto que você acabou de cadastrar e o seu horário, pode ser qualquer horário, agora precisamos interligar essas duas informações, a linha e o ponto. 
- Não se esqueça que é preciso pelo menos de 2 pontos para ver a linha da rota no mapa, 
+#### Passo 2: Cadastrar Linha de Ônibus
 
-<img width="1045" height="382" alt="Captura de tela de 2025-11-27 12-25-41" src="https://github.com/user-attachments/assets/eec4d864-992e-4fd8-b4af-a39046f504f9" />
+No menu, clique em "+ Adicionar" ao lado de Rotas e dê um nome à linha. <img width="1078" height="426" alt="Adicionar Rota" src="https://github.com/user-attachments/assets/5709f864-29f5-4006-af44-45938753e1eb" />
+#### Passo 3: Cadastrar Pontos e Coordenadas
 
-Salve tudo e retorne para a página incial apagando tudo menos "http://127.0.0.1:8000" e veja como ficou o site depois de adicionarmos as rotas, paradas e horários!
+Clique em "+ Adicionar" ao lado de Paradas. Insira o nome e as coordenadas obtidas no Google Maps. <img width="627" height="442" alt="Pegar Coordenadas" src="https://github.com/user-attachments/assets/5babbba1-edfa-481e-a896-5dae7481a9b2" />
 
-<img width="1295" height="624" alt="Captura de tela de 2025-11-27 13-04-34" src="https://github.com/user-attachments/assets/e9f7c722-2dcd-4119-aef5-c29832afe8dd" />
+Vincule o ponto à Rota desejada e defina o horário. <img width="1050" height="528" alt="Configurar Parada" src="https://github.com/user-attachments/assets/7f9d41e9-9a2e-4e39-be55-1e1967618806" />
+
+   **Nota: É necessário cadastrar pelo menos 2 pontos para que a linha da rota seja desenhada no mapa.**
+
+# 🏁 Resultado Final
+
+Após salvar, volte para ```http://127.0.0.1:8000``` para visualizar as rotas e horários integrados.
+
+<img width="1295" height="624" alt="Site funcionando" src="https://github.com/user-attachments/assets/e9f7c722-2dcd-4119-aef5-c29832afe8dd" />
